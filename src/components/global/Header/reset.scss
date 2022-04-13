@@ -1,0 +1,446 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+$brand-opacity:  rgba(0,123,255,.8);
+$brand:		     #3F54D1;
+$secondary: 	 #50E0B5;
+$green: 		 $secondary;
+$yellow: 	  	 #FFCB00;
+$orange: 		 #FAA019;
+$gray: 	 		 #69686B;
+$dark-gray: 	 #1E1D22;
+$light-gray: 	 #FBFBFB;
+$h-color: 		 #1E1D22;
+$p-color: 		 #69686B;
+$footer-bg: 	 #2B2B2B;
+$inner-width: 1252px;
+@font-face {
+	font-family: 'Cairo-Light';
+	src: url('../../../fonts/Cairo-Light.woff2') format('woff2'),
+		url('../../../fonts/Cairo-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Cairo-ExtraBold';
+	src: url('../../../fonts/Cairo-ExtraBold.woff2') format('woff2'),
+		url('../../../fonts/Cairo-ExtraBold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Muli-ExtraBold';
+	src: url('../../../fonts/Muli-ExtraBold.woff2') format('woff2'),
+		url('../../../fonts/Muli-ExtraBold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Cairo-Bold';
+	src: url('../../../fonts/Cairo-Bold.woff2') format('woff2'),
+		url('../../../fonts/Cairo-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Cairo-Black';
+	src: url('../../../fonts/Cairo-Black.woff2') format('woff2'),
+		url('../../../fonts/Cairo-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Cairo-ExtraLight';
+	src: url('../../../fonts/Cairo-ExtraLight.woff2') format('woff2'),
+		url('../../../fonts/Cairo-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Cairo-Medium';
+	src: url('../../../fonts/Cairo-Medium.woff2') format('woff2'),
+		url('../../../fonts/Cairo-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Cairo-Regular';
+	src: url('../../../fonts/Cairo-Regular.woff2') format('woff2'),
+		url('../../../fonts/Cairo-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Cairo-SemiBold';
+	src: url('../../../fonts/Cairo-SemiBold.woff2') format('woff2'),
+		url('../../../fonts/Cairo-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-BoldItalic';
+	src: url('../../../fonts/SourceSansPro-BoldItalic.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-Black';
+	src: url('../../../fonts/SourceSansPro-Black.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-Bold';
+	src: url('../../../fonts/SourceSansPro-Bold.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-BlackItalic';
+	src: url('../../../fonts/SourceSansPro-BlackItalic.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-BlackItalic.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-Italic';
+	src: url('../../../fonts/SourceSansPro-Italic.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-LightItalic';
+	src: url('../../../fonts/SourceSansPro-LightItalic.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-Regular';
+	src: url('../../../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-ExtraLightItalic';
+	src: url('../../../fonts/SourceSansPro-ExtraLightItalic.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-ExtraLightItalic.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-ExtraLight';
+	src: url('../../../fonts/SourceSansPro-ExtraLight.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-Light';
+	src: url('../../../fonts/SourceSansPro-Light.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora-Bold';
+	src: url('../../../fonts/Lora-Bold.woff2') format('woff2'),
+		url('../../../fonts/Lora-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-SemiBoldItalic';
+	src: url('../../../fonts/SourceSansPro-SemiBoldItalic.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-SemiBoldItalic.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SourceSansPro-SemiBold';
+	src: url('../../../fonts/SourceSansPro-SemiBold.woff2') format('woff2'),
+		url('../../../fonts/SourceSansPro-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora-BoldItalic';
+	src: url('../../../fonts/Lora-BoldItalic.woff2') format('woff2'),
+		url('../../../fonts/Lora-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora-MediumItalic';
+	src: url('../../../fonts/Lora-MediumItalic.woff2') format('woff2'),
+		url('../../../fonts/Lora-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora-Medium';
+	src: url('../../../fonts/Lora-Medium.woff2') format('woff2'),
+		url('../../../fonts/Lora-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora-Italic';
+	src: url('../../../fonts/Lora-Italic.woff2') format('woff2'),
+		url('../../../fonts/Lora-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora-SemiBoldItalic';
+	src: url('../../../fonts/Lora-SemiBoldItalic.woff2') format('woff2'),
+		url('../../../fonts/Lora-SemiBoldItalic.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora-SemiBold';
+	src: url('../../../fonts/Lora-SemiBold.woff2') format('woff2'),
+		url('../../../fonts/Lora-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora-Regular';
+	src: url('../../../fonts/Lora-Regular.woff2') format('woff2'),
+		url('../../../fonts/Lora-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+$h1-size:           		38px;
+$h1-height:           		44px;
+$h1-space:           		0;
+
+$h2-size:           		48px;
+$h2-height:           		56px;
+$h2-space:           		0;
+
+$h3-size:           		40px;
+$h3-height:           		46px;
+$h3-space:           		0;
+
+$h4-size:           		36px;
+$h4-height:           		42px;
+$h4-space:           		0;
+
+$h5-size:           		22px;
+$h5-height:           		28px;
+$h5-space:           		0;
+
+$h6-size:           		18px;
+$h6-height:           		24px;
+$h6-space:           		0;
+html,
+body {
+	font-size: 18px;
+	line-height: 29px;
+	letter-spacing: 0;
+	font-family: 'SourceSansPro-Regular';
+	color: $p-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $h-color;
+	font-family: 'Muli-ExtraBold';
+}
+h1 {
+	font-size: $h1-size;
+	line-height: $h1-height;
+	letter-spacing: $h1-space;
+}
+h2 {
+	font-size: $h2-size;
+	line-height: $h2-height;
+	letter-spacing: $h2-space;
+}
+h3 {
+	font-size: $h3-size;
+	line-height: $h3-height;
+	letter-spacing: $h3-space;
+}
+h4 {
+	font-size: $h4-size;
+	line-height: $h4-height;
+	letter-spacing: $h4-space;
+}
+h5 {
+	font-size: $h5-size;
+	line-height: $h5-height;
+	letter-spacing: $h5-space;
+}
+h6 {
+	font-size: $h6-size;
+	line-height: $h6-height;
+	letter-spacing: $h6-space;
+}
+::selection {
+	background: $brand;
+	color: #fff;
+}
+*.light {
+	color: #fff;
+	p {
+		color: #fff;
+	}
+}
+*.center {
+	text-align: center;
+	p {
+		text-align: center;
+	}
+}
+*.right {
+	text-align: right;
+	p {
+		text-align: right;
+	}
+}
+a {
+	transition: all 0.5s ease;
+	color: $brand;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+a.dark {
+	color: $h-color;
+}
+a.light {
+	color: #fff;
+}
+*.acf-light {
+	color: #fff !important;
+	* {
+		color: #fff;
+	}
+}
+* {
+	outline-color: transparent !important;
+	outline-style: none !important;
+	outline: none !important;
+}
+*:focus {
+	outline-color: transparent !important;
+	outline-style: none !important;
+	outline: none !important;
+}
+*:hover
+*:active, 
+*:focus {
+    outline: 0px !important;
+}
+@media(min-width: 768px) {
+	.mobile-only {
+		display: none;
+	}
+	.section-wrap {
+		display: block;
+		clear: both;
+		float: none;
+	}
+	.inner,
+	.container {
+		display: block;
+		clear: both;
+		float: none;
+		max-width: $inner-width;
+		margin: 0 auto;
+	}
+}
+@media (max-width: $inner-width) {
+	.inner,
+	.container {
+		margin: 0 15px;
+		padding-right: 0;
+		padding-left: 0;
+	}
+}

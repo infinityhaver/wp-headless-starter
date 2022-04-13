@@ -1,0 +1,32 @@
+.acf-full-width-text {
+	padding: 0;
+	.acf-full-width-heading {
+		margin-bottom: 20px;
+	}
+}
+.acf-narrow {
+	max-width: 900px;
+	margin: 0 auto;
+}
+.acf-extra-narrow {
+	max-width: 400px;
+	margin: 0 auto;
+}
+.acf-center {
+    text-align: center;
+    * {
+        text-align: center;
+    }
+}
+.acf-right {
+    text-align: right;
+    * {
+        text-align: right;
+    }
+}
+.acf-light {
+    color: #fff !important;
+    * {
+        color: #fff !important;
+    }
+}

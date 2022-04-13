@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="624px" height="132px" viewBox="0 0 624 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>down-arrow-right</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-418.000000, -2140.000000)" stroke="#50E0B5">
+            <g id="Group" transform="translate(419.000000, 2140.616650)">
+                <path d="M0,0 L0,45 C1.01453063e-15,53.2842712 6.71572875,60 15,60 L586,60 C594.284271,60 601,66.7157288 601,75 L601,120 L601,120" id="Path-3" stroke-width="2"></path>
+                <g id="Group-25-Copy-11" transform="translate(581.000000, 110.383350)" fill="#50E0B5" fill-rule="nonzero" stroke-width="1.698934">
+                    <g id="Group">
+                        <polygon id="Path" points="20 12 0 1.53186023 0.731779648 0 20 10.0851212 39.2682204 0 40 1.53186023"></polygon>
+                    </g>
+                    <g id="Group" transform="translate(0.000000, 8.000000)">
+                        <polygon id="Path" points="20 12 0 1.53186023 0.731779648 0 20 10.0851212 39.2682204 0 40 1.53186023"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

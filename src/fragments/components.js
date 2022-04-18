@@ -4,6 +4,16 @@
     export const componentFragments = graphql`
        
  
+      fragment Page_Accordions on WpPage_Pagecomponents_PageComponents_Accordions {
+        
+        accordionItem {
+            title
+            content
+        }
+    
+      }
+     
+ 
       fragment Page_FullWidth on WpPage_Pagecomponents_PageComponents_FullWidth {
         
         width
@@ -12,6 +22,26 @@
 		headingTag
 		heading
 		content
+		backgroundImage {
+			altText
+			caption
+			title
+			localFile {
+				childImageSharp {
+					gatsbyImageData(
+						placeholder: NONE
+						layout: FULL_WIDTH
+						quality: 100
+						webpOptions: {quality: 100}
+						formats: WEBP
+					)
+				}
+			}
+		}
+		overlay
+		overlayOpacity
+		xPosition
+		yPosition
 		paddingTop
 		paddingBottom
 	

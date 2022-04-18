@@ -1,14 +1,16 @@
 import React from 'react'
-import UtilityNav from '../navs/UtilityNav'
-import PrimaryNav from '../navs/PrimaryNav'
+import UtilityNav from '../Navs/UtilityNav'
+import PrimaryNav from '../Navs/PrimaryNav'
 import './Header.scss'
 
 const Header = () => {
 	return (
-		<header id="masthead" className="site-header">
-			<UtilityNav />
-			<PrimaryNav />
-		</header>
+		<>
+			<header id="masthead" className="site-header">
+				<UtilityNav />
+				<PrimaryNav />
+			</header>
+		</>
 	)
 }
 

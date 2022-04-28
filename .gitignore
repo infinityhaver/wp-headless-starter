@@ -1,5 +1,5 @@
 .wordpress-cache
-.env.development
+# .env.development
 
 # Logs
 logs

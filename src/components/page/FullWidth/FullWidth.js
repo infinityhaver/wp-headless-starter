@@ -21,40 +21,53 @@ const FullWidth = ({ width, textColor, textAlign, headingTag, heading, content, 
 		} else {}
 	}
 
+	function hexToRGBA(hex, alpha) {
+
+		var r = parseInt(hex.slice(1, 3), 16),
+			g = parseInt(hex.slice(3, 5), 16),
+			b = parseInt(hex.slice(5, 7), 16);
+	
+		if(alpha) {
+			return `rgba(${r}, ${g}, ${b}, ${alpha})`
+		} else {
+			return `rgb(${r}, ${g}, ${b})`
+		}
+	}
+
 	function Overlay() {
 		if(overlay) {
-			const hex2rgba = (hex, alpha = 1) => {
-				const [r, g, b] = hex.match(/\w\w/g).map(x => parseInt(x, 16));
-				function Alpha() {
-					if(alpha === 100) {
-						return (
-							'1'
-						)
-					} else if(alpha === 0) {
-						return (
-							'0'
-						)
-					} else {
-						const Alpha = `.${alpha}`
-						return (
-							Alpha
-						)
-					}
-				}
-				return `rgba(${r},${g},${b},${Alpha()})`;
-			};
-			const Overlay = hex2rgba(overlay, overlayOpacity)
+			const Overlay = hexToRGBA(overlay, OverlayOpacity())
+			return(
+				Overlay
+			)
 		} else {}
+	}
+
+	function OverlayOpacity() {
+		if(overlayOpacity === '100') {
+			return (
+				'1'
+			)
+		} else if(overlayOpacity === '0') {
+			return(
+				'0'
+			)
+		} else {
+			const Alpha = `.${overlayOpacity}`
+			return(
+				Alpha
+			)
+		}
 	}
 
 	function CSSBackground() {
 		if(backgroundImage && overlay) {
 			return(
-				`linear-gradient(${Overlay}, ${Overlay}), url(${BackgroundImage()})`
+				`linear-gradient(${Overlay()}, ${Overlay()}), url(${BackgroundImage()})`
 			)
 		} else if(!backgroundImage && overlay) {
 			return(
-				`linear-gradient(${Overlay}, ${Overlay})`
+				`linear-gradient(${Overlay()}, ${Overlay()})`
 			)
 		} else if(backgroundImage && !overlay) {
 			return(
@@ -71,7 +84,7 @@ const FullWidth = ({ width, textColor, textAlign, headingTag, heading, content, 
 			)
 		}
 	}
-
+	
 	return (
 		<div className="section-wrap acf-full-width-wrap" style={{ background: `${CSSBackground()}`, paddingTop: `${paddingTop}px`, paddingBottom: `${paddingBottom}px`, backgroundPosition: `${BackgroundPosition()}` }}>
 			<div className="inner">
